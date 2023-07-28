@@ -35,7 +35,14 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        $todo = Todo::create($request->all());
+        $todo = new Todo(); // Cria uma nova instância do modelo Todo
+
+        $todo->name = $request->input('name'); // Atribui o valor do input 'name' ao campo 'name' do modelo Todo
+
+        $todo->description = $request->input('description'); // Atribui o valor do input 'description' ao campo 'description' do modelo Todo
+
+        $todo->save(); // Salva o registro no banco de dados
+
         return response()->json($todo);
     }
 
