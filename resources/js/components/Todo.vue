@@ -7,7 +7,7 @@
 
                     <div class="card-body">
                         <div class="input-group">
-                            <input type="text" placeholder="Todo.." class="form-control" aria-label="todo"
+                            <input type="text" placeholder="Adicionar Tarefas.." class="form-control" aria-label="todo"
                                 aria-describedby="Adicionar nova tarefa..." v-model="todo_input">
                             <div class="input-group-append">
                                 <button title="Adicionar tarefa" v-if="!edit_todo_id" type="button"
@@ -151,3 +151,9 @@ export default {
     }
 }
 </script>
+
+<style>
+body {
+    background-color: #333333;
+}
+</style>
